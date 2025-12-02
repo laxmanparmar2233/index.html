@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamingHub Tournament Registration</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for gaming feel */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background */
+        }
+        .gaming-neon {
+            color: #00ff99; /* Neon Green */
+            text-shadow: 0 0 5px rgba(0, 255, 153, 0.5), 0 0 10px rgba(0, 255, 153, 0.3);
+        }
+        .card-bg {
+            background-color: #161b22; /* Slightly lighter dark background for cards */
+            border: 2px solid #30363d;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            transition: all 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+        }
+        .input-style {
+            background-color: #0d1117;
+            border-color: #30363d;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8">
+
+    <!-- Header and Branding -->
+    <header class="text-center py-8">
+        <h1 class="text-4xl sm:text-6xl font-extrabold mb-2 text-white">
+            <span class="gaming-neon">GAMINGHUB</span>.COM
+        </h1>
+        <p class="text-xl sm:text-2xl font-light text-gray-400">
+            Epic Battles Await. Register Now!
+        </p>
+    </header>
+
+    <main class="max-w-4xl mx-auto">
+
+        <!-- Tournament Details Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center gaming-neon border-b-2 border-[#00ff99] pb-2">
+                Tournament Formats & Prizes
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- 10-Player Showdown Card -->
+                <div class="card-bg p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <h3 class="text-2xl font-bold mb-3 text-red-400">10-Player Showdown</h3>
+                    <p class="text-gray-300 mb-4">A high-stakes mini-tournament for individual glory.</p>
+                    <ul class="space-y-2 text-gray-200">
+                        <li class="flex justify-between">
+                            <span class="font-semibold">Entry Fee:</span> 
+                            <span class="text-yellow-400">15 ? / Player</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="font-semibold">1st Prize:</span> 
+                            <span class="text-green-400">50 ?</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="font-semibold">2nd Prize:</span> 
+                            <span class="text-blue-400">30 ?</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="font-semibold">3rd Prize:</span> 
+                            <span class="text-purple-400">30 ?</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 5-Player Face-Off Card -->
+                <div class="card-bg p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <h3 class="text-2xl font-bold mb-3 text-yellow-400">5-Player Face-Off</h3>
+                    <p class="text-gray-300 mb-4">A fast-paced competition with fewer participants.</p>
+                    <ul class="space-y-2 text-gray-200">
+                        <li class="flex justify-between">
+                            <span class="font-semibold">Entry Fee:</span> 
+                            <span class="text-yellow-400">15 ? / Player</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="font-semibold">1st Prize:</span> 
+                            <span class="text-green-400">30 ?</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="font-semibold">2nd Prize:</span> 
+                            <span class="text-blue-400">20 ?</span>
+                        </li>
+                    </ul>
+                    <div class="pt-6"></div> <!-- Filler to align card heights -->
+                </div>
+
+                <!-- CS: 4 vs 4 Battle Card -->
+                <div class="card-bg p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <h3 class="text-2xl font-bold mb-3 text-blue-400">CS: 4 vs 4 Battle</h3>
+                    <p class="text-gray-300 mb-4">Team-based combat where every kill counts!</p>
+                    <ul class="space-y-2 text-gray-200">
+                        <li class="flex justify-between">
+                            <span class="font-semibold">Entry Fee:</span> 
+                            <span class="text-yellow-400">15 ? / Player</span>
+                        </li>
+                        <li class="flex justify-between col-span-2">
+                            <span class="font-semibold">Prize Pool:</span> 
+                            <span class="text-green-400">3 ? per Kill</span>
+                        </li>
+                    </ul>
+                    <div class="pt-6"></div> <!-- Filler to align card heights -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="card-bg p-6 sm:p-8 rounded-xl shadow-xl">
+            <h2 class="text-3xl font-bold mb-6 text-center text-white">
+                Register Your Spot
+            </h2>
+
+            <!-- 
+                !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                !!! CRITICAL STEP: YOU MUST CHANGE THE 'action' URL BELOW                  !!!
+                !!! This is a placeholder. Replace 'YOUR_FORMSPREE_ENDPOINT' with the      !!!
+                !!! actual unique link you get from Formspree (or similar service)         !!!
+                !!! to forward submissions to laxmancom2021@gmail.com.                     !!!
+                !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            -->
+            <form id="registrationForm" 
+                  action="https://formspree.io/f/mnnevgbz" 
+                  method="POST" 
+                  class="space-y-6">
+                
+                <!-- Name Input -->
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Full Name (or Team Name)</label>
+                    <input type="text" id="name" name="name" required
+                           class="input-style w-full p-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150"
+                           placeholder="Enter your name or team name">
+                </div>
+
+                <!-- Email Input -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email Address (You will receive a confirmation here)</label>
+                    <!-- Formspree uses '_replyto' to set the reply-to address -->
+                    <input type="email" id="email" name="_replyto" required
+                           class="input-style w-full p-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150"
+                           placeholder="Enter your email">
+                </div>
+                
+                <!-- Tournament Selection -->
+                <div>
+                    <label for="tournament" class="block text-sm font-medium text-gray-400 mb-1">Select Tournament</label>
+                    <select id="tournament" name="Tournament_Type" required
+                            class="input-style w-full p-3 rounded-lg border-2 appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150">
+                        <option value="" disabled selected>Choose a tournament format...</option>
+                        <option value="10-player">10-Player Showdown (15 ?)</option>
+                        <option value="5-player">5-Player Face-Off (15 ?)</option>
+                        <option value="cs-4v4">CS: 4 vs 4 Battle (15 ? per Player)</option>
+                    </select>
+                </div>
+
+                <!-- A standard success message page will be shown by Formspree upon submission -->
+
+                <!-- Submit Button -->
+                <button type="submit"
+                        class="btn-primary w-full text-white font-bold py-3 rounded-xl uppercase tracking-wider shadow-lg">
+                    Submit Registration
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-12 py-4 text-gray-500 border-t border-gray-700 max-w-4xl mx-auto">
+        <p>&copy; 2024 GamingHub. All rights reserved. | Registration Date: Oct 26, 2024</p>
+    </footer>
+
+</body>
+</html>
